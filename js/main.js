@@ -24,22 +24,25 @@ const team = [
     imgNome: 'angela-lopez-social-media-manager.jpg'
   },
   {
-    nome: 'Wayne Barnett',
+    nome: 'Scott Estrada',
     ruolo: 'Developer',
     imgNome: 'scott-estrada-developer.jpg'
   },
   {
-    nome: 'Wayne Barnett',
+    nome: 'Barbara Ramos',
     ruolo: 'Graphic Designer',
     imgNome: 'barbara-ramos-graphic-designer.jpg'
   },
 ];
 
 console.log(team);
-
-// MILESTONE 1
+const body = document.querySelector('body');
+// MILESTONE 1 e 2
 for (let i = 0; i < team.length; i++) {
+  const div = document.createElement('div');
   for (let key in team[i]) {
     console.log(`${key}:`,team[i][key]);
+    div.textContent += `${team[i][key]}  `;
   }
+  body.append(div);
 }
